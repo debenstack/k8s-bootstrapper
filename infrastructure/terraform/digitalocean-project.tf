@@ -1,7 +1,7 @@
-resource "digitalocean_project" "playground" {
-  name        = "k8s-bootstrapper"
-  description = "A project to run hivenetes/k8s-bootstrapper on DigitalOcean."
-  purpose     = "Framework to build a production-grade setup"
+resource "digitalocean_project" "k8stack-project" {
+  name        = "k8stack"
+  description = "debenstack Kubernetes Cluster"
+  purpose     = "Production debenstack Kubernetes"
   environment = "Production"
   resources   = [digitalocean_kubernetes_cluster.bootstrapper.urn]
 }
